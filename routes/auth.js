@@ -17,7 +17,7 @@ router.get(
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     // res.json({ success : true })
-    res.redirect('https://story-frontend.web.app/');
+    res.redirect('http://localhost:3000');
   }
 )
 router.get('/login/success', (req, res) => {
@@ -37,7 +37,7 @@ router.get('/req', (req, res) => {
 // @route   /auth/logout
 router.get('/logout', (req, res) => {
   req.logout()
-  res.redirect('https://story-frontend.web.app/')
+  res.redirect('http://localhost:3000')
 })
 
 module.exports = router

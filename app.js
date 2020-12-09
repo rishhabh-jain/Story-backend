@@ -11,11 +11,12 @@ connectDB()
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use((req, res, next) => {
-  const allowedOrigins = ['http://localhost:3000', 'https://story-frontend.web.app'];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-       res.setHeader('Access-Control-Allow-Origin', origin);
-  }
+  // const allowedOrigins = ['http://localhost:3000', 'https://story-frontend.web.app'];
+  // const origin = req.headers.origin;
+  // if (allowedOrigins.includes(origin)) {
+  //      res.header('Access-Control-Allow-Origin', origin);
+  // }
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.header(
     "Access-Control-Allow-Headers",
     "*"
